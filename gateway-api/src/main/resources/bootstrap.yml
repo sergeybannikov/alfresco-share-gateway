@@ -1,0 +1,17 @@
+spring:
+  application.name: com/example/test/gateway
+  cloud:
+    vault:
+      host: 127.0.0.1
+      port: 8201
+      scheme: http
+      authentication: TOKEN
+      token: 7aeb7239-a89f-4ee9-8fd4-718c6f8ac4a9
+      connection-timeout: 5000
+      read-timeout: 15000
+      config:
+        order: -10
+#      kv:
+#         enabled: true
+#         backend: secret
+#         profile-separator: '/'

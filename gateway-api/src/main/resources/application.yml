@@ -1,0 +1,32 @@
+server:
+    port: 8333
+
+app:
+  security:
+    keycloak:
+      enabled: false
+      url: https://examole.com
+      realm: storage
+
+    allowed-web-origins:
+          - "*"
+  target:
+    host: http://localhost
+    port: 8080
+    user-header: X-Alfresco-Remote-User
+    timeout: 600
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+  path: logs
+
+
+zuul:
+  routes:
+    alfresco:
+      path: /alfresco-proxy/**
+      url: http://localhost:8080
+  servlet-path: /zuul
+

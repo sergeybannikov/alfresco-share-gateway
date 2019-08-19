@@ -1,0 +1,13 @@
+
+**/target/*
+**/.idea/workspace.xml
+**/.idea/dictionaries/*.xml
+**/.gradle/*
+**/build/*
+**/logs/*
+**/out/*
+*.idea
+
+\.gradle/
+
+*.jar
